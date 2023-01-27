@@ -1,0 +1,479 @@
+{
+	"info": {
+		"_postman_id": "f956adea-bf30-439c-b3f6-43f5da2b928e",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6522626"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8098/user/usersignup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Sania\",\r\n    \"lastName\":\"khan\",\r\n    \"email\":\"Sania09@mailinator.com\",\r\n    \"password\":\"hello123\",\r\n    \"address\":\"xyz assdd\",\r\n    \"phone\":\"0927723553\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8098/user/usersignup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8098",
+					"path": [
+						"user",
+						"usersignup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8098/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"Sania09@mailinator.com\",\r\n    \"password\":\"hello123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8098/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8098",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8098/admin/adminsignup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Sania\",\r\n    \"userName\":\"saniakhan\",\r\n    \"email\":\"Sania@mailinator.com\",\r\n    \"password\":\"hello123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8098/admin/adminsignup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8098",
+					"path": [
+						"admin",
+						"adminsignup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8098/admin/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"userName\":\"saniakhan\",\r\n    \"password\":\"hello123\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8098/admin/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8098",
+					"path": [
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8098/products/addproduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjUwZjA1OTZjYzIwZTNmNmM0NDIwNzEiLCJlbWFpbCI6IlNhbmlhQG1haWxpbmF0b3IuY29tIiwiaWF0IjoxNTk5MjkyMTEyLCJleHAiOjE1OTkzODIxMTJ9.hqZV6uRuBRcKJJ3ozYZ2s62G-zzK7RB4_HtFusm-E3U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjUwZjA1OTZjYzIwZTNmNmM0NDIwNzEiLCJlbWFpbCI6IlNhbmlhQG1haWxpbmF0b3IuY29tIiwiaWF0IjoxNTk5MjkyMTEyLCJleHAiOjE1OTkzODIxMTJ9.hqZV6uRuBRcKJJ3ozYZ2s62G-zzK7RB4_HtFusm-E3U",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Pizza kit",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "Pizza",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "34.00",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "2 pack",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Meal kit",
+							"type": "text"
+						},
+						{
+							"key": "additionalInformation",
+							"value": "pizza is here",
+							"type": "text"
+						},
+						{
+							"key": "giftcardValue",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "crust",
+							"value": "Classic",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Designer/Desktop/des.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8098/products/addproduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8098",
+					"path": [
+						"products",
+						"addproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TYPESIGNIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"sania\",\r\n    \"email\":\"sania@mailinator.com\",\r\n    \"password\":\"hellowowrld123\",\r\n    \"profileName\":\"sandy10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/auth/signUp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"signUp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin(usman)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"sania09@mailinator.com\",\r\n    \"password\": \"12345abcd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://test-api09.herokuapp.com/signin/",
+					"protocol": "https",
+					"host": [
+						"test-api09",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"signin",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"qwerty000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9099/signup/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"sania\",\r\n    \"email\":\"sania09@mailinator.com\",\r\n    \"password\":\"12345abcd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9099/signup/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9099",
+					"path": [
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9099/signin/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"sania09@mailinator.com\",\r\n    \"password\": \"12345abcd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9099/signin/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9099",
+					"path": [
+						"signin",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get single question",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9099/event/63d390a81b888b250c0871d7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9099",
+					"path": [
+						"event",
+						"63d390a81b888b250c0871d7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9099/event/Q",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9099",
+					"path": [
+						"event",
+						"Q"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add questions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question\": \"What does JS stands for?\",\r\n    \"answers\": [\r\n        {\r\n            \"option 1\": \"Java Script\",\r\n            \"status\": \"true\"\r\n        },\r\n                {\r\n            \"option 2\": \"Java snippet\",\r\n            \"status\": \"false\"\r\n        },        {\r\n            \"option 3\": \"Java snippet\",\r\n            \"status\": \"false\"\r\n        },        {\r\n            \"option 4\": \"java snippet library\",\r\n            \"status\": \"false\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9099/event/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9099",
+					"path": [
+						"event",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9099/event/delete/63d390a81b888b250c0871d7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9099",
+					"path": [
+						"event",
+						"delete",
+						"63d390a81b888b250c0871d7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit ",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question\": \"What does Css stands for?\",\r\n    \"answers\": [\r\n        {\r\n            \"option 1\": \"cascading style sheet\",\r\n            \"status\": \"true\"\r\n        },\r\n                {\r\n            \"option 2\": \"Java snippet\",\r\n            \"status\": \"false\"\r\n        },        {\r\n            \"option 3\": \"Java snippet\",\r\n            \"status\": \"false\"\r\n        },        {\r\n            \"option 4\": \"java snippet library\",\r\n            \"status\": \"false\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9099/event/edit/63d391bfb0d956316c43265e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9099",
+					"path": [
+						"event",
+						"edit",
+						"63d391bfb0d956316c43265e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
